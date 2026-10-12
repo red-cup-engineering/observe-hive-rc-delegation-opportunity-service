@@ -1,0 +1,31 @@
+{
+  "name": "@red-cup-engineering/observe-hive-rc-delegation-opportunity-service",
+  "version": "0.1.0",
+  "description": "Keyless observation of one Hive account's spare Resource Credit (RC) capacity, as a candidate for RC delegation leasing.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.mjs"
+    },
+    "./observe": "./scripts/observe-hive-rc-delegation-opportunity.mjs"
+  },
+  "bin": {
+    "observe-hive-rc-delegation-opportunity": "./scripts/observe-hive-rc-delegation-opportunity.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/index.mjs && node --check scripts/observe-hive-rc-delegation-opportunity.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
+    "@red-cup-engineering/normalize-earning-opportunity-service": "workspace:*"
+  }
+}
