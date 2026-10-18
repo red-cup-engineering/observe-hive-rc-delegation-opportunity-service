@@ -27,5 +27,9 @@
   "dependencies": {
     "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
     "@red-cup-engineering/normalize-earning-opportunity-service": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/observe-hive-rc-delegation-opportunity-service.git"
   }
 }
